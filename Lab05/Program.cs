@@ -41,11 +41,11 @@ namespace Lab05
             //Compound assignment : +=
             int bloodstone = 20;
             demonLordHp += bloodstone;
-            Console.WriteLine($"\nDemonLord use a bloodstone, repaoring {bloodstone} HP , DemonLord HP now {demonLordHp}");
-            //Aritmetic + การโจมตีธรรมดา
+            Console.WriteLine($"\nDemonLord use a bloodstone, restoring {bloodstone} HP , DemonLord HP now {demonLordHp}");
+            //Blood missile + การโจมตีธรรมดา
             int normDmg = Math.Max(0, demonLordAtk - heroDef);
             Console.WriteLine($"\nNormal Attack would deal : {normDmg} DMG");
-            //Precedence การโจมตีพิเศษ
+            //Blood Nuke การโจมตีพิเศษ
             int pwrDmg = Math.Max(0, demonLordAtk * 2 - heroDef);
             Console.WriteLine($"\nNormal Attack would deal : {pwrDmg} DMG");
             //Random, Simple percent of critical chane.
