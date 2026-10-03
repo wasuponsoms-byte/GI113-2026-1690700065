@@ -12,41 +12,41 @@ namespace Lab05
         static void Main(string[] args)
         {
             //Game titl,Subtitle
-            Console.WriteLine("[=====Starship Warfare=====]");
-            Console.WriteLine("Starship Mercury vs Starship Neptrun Fight Damage calculator\n");
+            Console.WriteLine("[=====DemonLord The Defender=====]");
+            Console.WriteLine("DemonLord vs Hero Fight Damage calculator\n");
 
-            //Mercury stats input
-            Console.Write("Mecury HP : ");
-            bool mercuryHpOk = int.TryParse(Console.ReadLine(), out int mercuryHp);
-            Console.Write("Mecury ATK : ");
-            bool mercuryAtkOk = int.TryParse(Console.ReadLine(), out int mercuryAtk);
-            Console.Write("Mecury DEF : ");
-            bool mercuryDefOk = int.TryParse(Console.ReadLine(), out int mercuryDef);
-            //Neptrun stats input
-            Console.Write("Neptrun HP : ");
-            bool neptrunHpOk = int.TryParse(Console.ReadLine(), out int neptrunHp);
-            Console.Write("Neptrun ATK : ");
-            bool neptrunAtkOk = int.TryParse(Console.ReadLine(), out int neptrunAtk);
-            Console.Write("Neptrun DEF : ");
-            bool neptrunDefOk = int.TryParse(Console.ReadLine(), out int neptrunDef);
+            //DemonLord stats input
+            Console.Write("DemonLord HP : ");
+            bool demonLordHpOk = int.TryParse(Console.ReadLine(), out int demonLordHp);
+            Console.Write("DemonLord ATK : ");
+            bool demonLordAtkOk = int.TryParse(Console.ReadLine(), out int demonLordAtk);
+            Console.Write("DemonLord DEF : ");
+            bool demonLordDefOk = int.TryParse(Console.ReadLine(), out int demonLordDef);
+            //Hero stats input
+            Console.Write("Hero HP : ");
+            bool heroHpOk = int.TryParse(Console.ReadLine(), out int heroHp);
+            Console.Write("Hero ATK : ");
+            bool heroAtkOk = int.TryParse(Console.ReadLine(), out int heroAtk);
+            Console.Write("Hero DEF : ");
+            bool heroDefOk = int.TryParse(Console.ReadLine(), out int heroDef);
             //Input valiation
-            bool isMercuryInValid = mercuryHpOk && mercuryAtkOk && mercuryDefOk;
-            bool isNeptrunInValid = neptrunHpOk && neptrunAtkOk && neptrunDefOk;
-            Console.WriteLine($"\nMERCURY STATS VAILD : {isMercuryInValid}");
-            Console.WriteLine($"NEPTRUN STATS VAILD : {isNeptrunInValid}");
+            bool isDemonLordInValid = demonLordHpOk && demonLordAtkOk && demonLordDefOk;
+            bool isHeroInValid = heroHpOk && heroAtkOk && heroDefOk;
+            Console.WriteLine($"\nDEMONLORD STATS VAILD : {isDemonLordInValid}");
+            Console.WriteLine($"HERO STATS VAILD : {isHeroInValid}");
 
-            Console.WriteLine($"[MERCURY]      HP : {mercuryHp} ATK : {mercuryAtk} DEF : {mercuryDef}");
-            Console.WriteLine($"[NEPTRUN]      HP : {neptrunHp} ATK : {neptrunAtk} DEF : {neptrunDef}");
+            Console.WriteLine($"[DEMONLORD]HP : {demonLordHp} ATK : {demonLordAtk} DEF : {demonLordDef}");
+            Console.WriteLine($"[HERO] HP : {heroHp} ATK : {heroAtk} DEF : {heroDef}");
 
             //Compound assignment : +=
-            int repairKit = 20;
-            mercuryHp += repairKit;
-            Console.WriteLine($"\nMercury use a repairkit, repaoring {repairKit} HP , StarshipMercury HP now {mercuryHp}");
+            int bloodstone = 20;
+            demonLordHp += bloodstone;
+            Console.WriteLine($"\nDemonLord use a bloodstone, repaoring {bloodstone} HP , DemonLord HP now {demonLordHp}");
             //Aritmetic + การโจมตีธรรมดา
-            int normDmg = Math.Max(0, mercuryAtk - neptrunDef);
+            int normDmg = Math.Max(0, demonLordAtk - heroDef);
             Console.WriteLine($"\nNormal Attack would deal : {normDmg} DMG");
             //Precedence การโจมตีพิเศษ
-            int pwrDmg = Math.Max(0, mercuryAtk * 2 - neptrunDef);
+            int pwrDmg = Math.Max(0, demonLordAtk * 2 - heroDef);
             Console.WriteLine($"\nNormal Attack would deal : {pwrDmg} DMG");
             //Random, Simple percent of critical chane.
             Random randomSometing = new Random();
